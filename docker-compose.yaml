@@ -1,13 +1,13 @@
 version: "3.8"
 services:
-      Backend:
+      backend:
         build: /root/Docker_studentapp/Backend
         container_name : backend
         ports : 
           - 8080:8080
         depends_on :
           - Frontend
-      Frontend:
+      frontend:
         build: /root/Docker_studentapp/Frontend
         container_name : frontend
         ports : 
