@@ -5,6 +5,7 @@ services:
         container_name : frontend
         ports : 
           - 80:80
+        network_mode: bridge
       backend:
         build: /root/Docker_studentapp/Backend
         container_name : backend
