@@ -1,5 +1,15 @@
 version: "3.8"
 services:
+      databaseimg:
+        build: ./database
+        environment:
+        MYSQL_ROOT_PASSWORD: "1234"
+        MYSQL_DATABASE: "studentapp"
+        MYSQL_USER: "sayyam"
+        MYSQL_PASSWORD: "1234"
+        ports:
+         - 3306:3306
+        network_mode: bridge
       frontend:
         build: /root/Docker_studentapp/Frontend
         container_name : frontend
